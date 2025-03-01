@@ -8,7 +8,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/js/index.js'
+    index: './src/js/index.js',
+    new: './src/js/new.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -106,6 +107,13 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
+    }),
+
+        // New
+    new HtmlWebpackPlugin({
+      template: './src/new.html',
+      filename: './new.html',
+      chunks: ['new']
     }),
 
     //404

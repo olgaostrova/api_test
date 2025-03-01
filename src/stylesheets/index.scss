@@ -1,0 +1,57 @@
+body.index {
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .postCard {
+        max-width: 600px;
+        margin: 40px 0;
+        padding: 20px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+    }
+
+    h2 {
+        margin-top: 10px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+body.new {
+    form {
+        div {
+            margin-top: 20px;
+        }
+    }
+
+    label {
+        display: block;
+    }
+
+    input, textarea {
+        margin-top: 4px;
+    }
+
+    &.guestView {
+
+        #postForm,
+        #signOutLink {
+            display: none;
+        }
+    }
+
+    &.userView {
+
+        #signInForm,
+        #signUpForm {
+            display: none;
+        }
+    }
+}

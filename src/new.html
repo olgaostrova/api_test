@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="new">
+    
+
+    <body class="rails-spa signIn">
+        <a href="http://localhost:3000/api/v1/sign_out.json" id="signOutLink">Sign Out</a>
+
+        <h3>Войти</h3>
+        
+        <form action="http://localhost:3000/api/v1/sign_in.json" accept-charset="UTF-8" id="signInForm">
+            <div class="field">
+                <label for="user_email">Электронная почта</label><br />
+                
+                <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]"
+                id="user_email" />
+            </div>
+            
+            <div class="field">
+                <label for="user_password">Пароль</label><br />
+                
+                <input autocomplete="current-password" type="password" name="user[password]" id="user_password" />
+            </div>
+            
+            <div class="actions">
+                <input type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+            </div>
+        </form>
+        
+
+        <!-- <form action="http://localhost:3000/api/v1/sign_in.json" accept-charset="UTF-8" id="signInForm" method="post">
+            <div class="field">
+                <label for="user_email">Электронная почта</label><br>
+                <input autofocus="autofocus" autocomplete="email" type="email" name="user[email]" id="user_email">
+            </div>
+        
+            <div class="field">
+                <label for="user_password">Пароль</label><br>
+                <input autocomplete="current-password" type="password" name="user[password]" id="user_password">
+            </div>
+        
+            <div class="actions">
+                <input type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+            </div>
+        </form> -->
+
+        <form action="http://localhost:3000/api/v1/sign_up.json" accept-charset="UTF-8" id="signUpForm">
+            <h3>Зарегистрироваться</h3>
+            <div class="field">
+                <label for="user_email">Электронная почта</label><br />
+                <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]"
+                id="new_user_email" />
+            </div>
+            
+            <div class="field">
+                <label for="user_password">Пароль</label>
+                <em>(6 characters minimum)</em>
+                <br />
+                <input autocomplete="new-password" type="password" name="user[password]" id="new_user_password" />
+            </div>
+            
+            <div class="field">
+                <label for="user_password_confirmation">Подтверждение пароля</label><br />
+                <input autocomplete="new-password" type="password" name="user[password_confirmation]"
+                id="new_user_password_confirmation" />
+            </div>
+            
+            <div class="actions">
+                <input type="submit" name="commit" value="Sign up" data-disable-with="Sign up" />
+            </div>
+        </form>
+        
+        <form 
+        action="http://localhost:3000/api/v1/posts.json" 
+        accept-charset="UTF-8" 
+        id="postForm">
+
+        <div>
+            <h3 style="display: block" for="post_post_image">Создать пост</h3>
+            <input type="file" name="post[post_image]" id="post_post_image" />
+        </div>
+        <div>
+            <label style="display: block" for="post_title">Title</label>
+            <input type="text" name="post[title]" id="post_title" />
+        </div>
+        <div>
+            <label style="display: block" for="post_text">text</label>
+            <textarea name="post[text]" id="post_text"></textarea>
+        </div>
+        <div>
+            <input type="submit" name="commit" value="Создать post" data-disable-with="Создать post" />
+        </div>
+    </form>
+</body>
+</html>

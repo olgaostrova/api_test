@@ -1,6 +1,6 @@
 /* основные стили */
 @import 'stylesheets/index.scss';
-@import 'stylesheets/reset.scss';
+/* @import 'stylesheets/reset.scss'; */
 @import 'fonts.scss';
 @import 'stylesheets/mixins.scss';
 @import 'stylesheets/vars.scss';
